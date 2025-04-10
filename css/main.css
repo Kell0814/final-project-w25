@@ -1,0 +1,36 @@
+* {
+box-sizing: border-box;
+}
+
+.wrapper {
+max-width: 1200px;
+margin: auto;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+header ul{
+    list-style: none; 
+}
+
+header ul li{
+ display: inline-block;   
+}
+
+header a{
+    text-decoration: none;
+    color:#000;
+}
+
+body{
+  font-family:"Poppins", serif;
+  font-weight: 400;
+}
+
+h1{
+  font-size: 2.027rem;
+}

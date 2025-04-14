@@ -1,36 +1,246 @@
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.wrapper {
-max-width: 1200px;
-margin: auto;
+body {
+  font-family: 'Poppins', serif;
+  font-weight: 400; 
+}
+
+.img {
+   border-radius: 5%;
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
 }
 
 header nav{
   display: flex;
-  justify-content: space-between;
-  align-items: right;
+  gap: 17px;
 }
 
-header ul{
-    list-style: none; 
-}
-
-header ul li{
- display: inline-block;   
+nav ul li{
+  list-style: none;
+  font-size: large;
+  flex-wrap: wrap;
 }
 
 header a{
-    text-decoration: none;
-    color:#000;
+  text-decoration: none;
 }
 
-body{
-  font-family:"Poppins", serif;
-  font-weight: 400;
+#products .wrapper div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  "div1 div1 div1"
+  "div2 div3 div4";
+  padding-top: 17px;
+  gap: 20px;
+}
+
+#products img:nth-child(1){
+grid-area: div1;
+max-width: 100%;
+}
+
+#products img:nth-child(2){
+  grid-area: div2;
+  max-width: 50%;
+}
+
+#products img:nth-child(3){
+  grid-area: div3;
+  max-width: 50%;
+}
+
+#products img:nth-child(4){
+ grid-area: div4;
+ max-width: 50%;  
 }
 
 h1{
+  max-width: 1200px;
+  margin: auto;
   font-size: 2.027rem;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+section{
+  max-width: 1200px;
+  margin: auto;
+}
+
+#intro .btn, a:link a:visited{
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 4px 5px;
+  border: 5px solid #000;
+}
+
+#intro .wrapper .bold{
+  font-weight: 1000px;
+}
+
+#secret {
+  background-color: #f8fafc;
+  text-align: left;
+  padding-bottom: 30px;
+  margin-top: 62px;
+  padding-top: 13px;
+}
+
+#secret p{
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#reviews{
+  background-color: #000;
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 28px;
+}
+
+#reviews h2{
+  text-align: center;
+}
+
+#reviews .wrapper div p{
+  font-style: italic;
+}
+
+#pairings{
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "div1 div2"
+  "div3 div4"; 
+  gap: 22px;
+}
+
+#pairings img:nth-child(1){
+  grid-area: div1;
+  max-width: 100%;
+}
+
+#pairings img:nth-child(2){
+  grid-area: div2;
+  max-width: 100%;
+}
+
+#pairings img:nth-child(3){
+  grid-area: div3;
+  max-width: 100%;
+}
+
+#pairings img:nth-child(4){
+  grid-area: div4;
+  max-width: 100%;
+}
+
+h2{ 
+  text-align: center;
+}
+
+#pairings {
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+@media(min-width: 768px){
+  
+  #intro .wrapper div{
+    padding: 0;
+  }
+
+  #products .wrapper{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "div1 div2"
+    "div3 div4"; 
+    gap: 15px;    
+  }
+
+  #products img:nth-child(1){
+    grid-area: div1;
+    max-width: 100%;
+    }
+    
+    #products img:nth-child(2){
+      grid-area: div2;
+      max-width: 100%;
+    }
+    
+    #products img:nth-child(3){
+      grid-area: div3;
+      max-width: 100%;
+    }
+    
+    #products img:nth-child(4){
+     grid-area: div4;
+     max-width: 100%;  
+    }
+    
+  #secret .wrapper article, p{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: left;
+  }
+
+  #reviews .wrapper article q{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  #pairings{
+    display: flex;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+    "div1 div2 div3 div4";
+    gap: 20px;
+  }
+  #pairings img:nth-child(1){
+    grid-area: div1;
+    max-width: 100%;
+  }
+  
+  #pairings img:nth-child(2){
+    grid-area: div2;
+    max-width: 100%;
+  }
+  
+  #pairings img:nth-child(3){
+    grid-area: div3;
+    max-width: 100%;
+  }
+  
+  #pairings img:nth-child(4){
+    grid-area: div4;
+    max-width: 100%;
+  }
+
+  #pairings div p{
+    justify-content: center;
+    padding-top: 0;
+  }
+
+}
+
+@media(min-width: 960px){
+
 }
